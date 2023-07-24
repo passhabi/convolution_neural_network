@@ -160,3 +160,8 @@ cython_debug/
 #.idea/
 
 fashion_minst/.idea
+generated horse-human pictures/.idea
+generated horse-human pictures/train_data
+generated horse-human pictures/valid_data
+generated horse-human pictures/horse-or-human.zip   
+generated horse-human pictures/validation-horse-or-human.zip
