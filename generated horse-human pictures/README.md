@@ -1,1 +1,0 @@
-# Human or Horse detection
