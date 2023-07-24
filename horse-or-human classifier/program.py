@@ -1,6 +1,3 @@
-# download the zip files:
-# https://storage.googleapis.com/tensorflow-1-public/course2/week3/horse-or-human.zip
-# https://storage.googleapis.com/tensorflow-1-public/course2/week3/validation-horse-or-human.zip
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
