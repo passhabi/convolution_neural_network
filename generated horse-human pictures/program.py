@@ -91,3 +91,22 @@ for img_path in os.listdir('test'):
         print(prediction, "The file\33[34m", img_path, "\33[38mis a human")
     else:
         print(prediction, "The file\33[34m", img_path, "\33[38mis a horse")
+
+
+images, labels = list(train_dataset.take(1))[0]  # taking only 1 batch (the first batch) of 9 batches
+
+idx = 127
+image = images[idx].numpy().astype('uint8')  # take the image with idx from 128 images
+label = labels[idx].numpy().astype('uint8')
+
+print(label)
+plt.imshow(image)
+plt.show()
+
+# check output of each layer:
+outputs = [layer.output for layer in model.layers]
+activations = tf.keras.Model(inputs=model.input, outputs=outputs)
+
+f = activations.predict(image.reshape((1,) + image.shape))[7]  # 12 layer
+plt.imshow(f[0, :, :, 5])
+plt.show()
